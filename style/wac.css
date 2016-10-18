@@ -1,0 +1,96 @@
+/* Style for our header texts
+	* --------------------------------------- */
+
+	body{
+		color:#fff;		
+		font-family: "Roboto", "Noto Sans", sans-serif;
+
+	}
+	h1{
+		font-size: 2rem;		
+		color: #fff;
+		margin:0;
+	}
+	h2{
+		font-size: 1.2rem;
+	}
+	p {
+		font-size: 1rem;
+		
+	}
+	.intro{
+		display: none;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	background: white;
+}
+
+	.fp-slidesNav.bottom{
+		bottom: 15px;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	#section2 h1{
+		color: #333;
+	}
+
+	.fullbg{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+	}
+	#slide1{
+		background-image: url(../images/1_smaller.jpg);
+		background-position: 70% 50%;
+	}
+
+	#slide2{
+		background-image: url(../images/2_smaller.jpg);
+	}
+
+	#slide2 .fp-tableCell, #slide3 .fp-tableCell, #slide4 .fp-tableCell{
+		vertical-align: bottom;
+	}
+
+	#slide2 .intro, #slide3 .intro, #slide4 .intro{		
+		padding:30px;
+		/*text-shadow: 4px 4px 10px rgba(0,0,0,1);*/
+		background-color: rgba(0,0,0,.5);
+	}
+
+	#slide3{
+		background-image: url(../images/3_smaller.jpg);
+		background-position: 75% 50%;
+	}
+
+	#slide4{
+		background-image: url(../images/4_smaller.jpg);
+	}
+
+	@media (min-width: 600px){
+		
+		h1{
+			font-size:  3em;
+		}
+		h2{
+			font-size: 1.8em
+		}
+
+
+	}

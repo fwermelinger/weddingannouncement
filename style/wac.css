@@ -1,29 +1,54 @@
 /* Style for our header texts
-	* --------------------------------------- */
+* --------------------------------------- */
 
-	body{
-		color:#fff;		
-		font-family: "Roboto", "Noto Sans", sans-serif;
+body{
+
+		color: #333;
+	font-family: "Roboto", "Noto Sans", sans-serif;
+	background-color: #fff;
+
+}
+h1{
+	font-size: 2rem;		
+		color: #333;
+	margin:0;
+}
+h2{
+	padding: 20px;
+	margin-top: 30px;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 160%;
+}
+p {
+	font-size: 0.9rem;
+
+}
+.intro{
+	display: none;
+}
+
+.fp-controlArrow.fp-next{
+	border-width: 20px 0 20px 18px;
+	border-color:transparent transparent transparent rgba(0,0,0,.3);
+
+}
+
+.fp-controlArrow.fp-prev{
+	border-width: 20px 18px 20px 0;
+	border-color:transparent rgba(0,0,0,.3) transparent transparent;
+
+}
+
+.fp-controlArrow{
+}
+
+	#section1{
+		background-color: #f7f7f5;
+	max-width: 700px;
+	margin:0 auto;
 
 	}
-	h1{
-		font-size: 2rem;		
-		color: #fff;
-		margin:0;
-	}
-	h2{
-		font-size: 1.2rem;
-	}
-	p {
-		font-size: 1rem;
-		
-	}
-	.intro{
-		display: none;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
 	.section{
 		text-align:center;
 	}
@@ -31,9 +56,9 @@
 	/* Overwriting styles for the navigation dots (to place it where we want)
 	* --------------------------------------- */
 
-#fp-nav ul li a span, .fp-slidesNav ul li a span{
-	background: white;
-}
+	#fp-nav ul li a span, .fp-slidesNav ul li a span{
+		background: #fd96a7;
+	}
 
 	.fp-slidesNav.bottom{
 		bottom: 15px;
@@ -42,54 +67,63 @@
 	/* Bottom menu
 	* --------------------------------------- */
 	#infoMenu li a {
-		color: #fff;
+		color: #333;
 	}
 
 	#section2 h1{
 		color: #333;
 	}
 
+#fullpage {
+
+}
 	.fullbg{
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 
 	}
-	#slide1{
+	.topimage{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 60%;
+		width: 100%;
+
+	}
+	#slide0{
+		background-image: url(../images/0.jpg);
+	}
+	#bgslide1{
 		background-image: url(../images/1_smaller.jpg);
-		background-position: 70% 50%;
 	}
 
-	#slide2{
+	#bgslide2{
 		background-image: url(../images/2_smaller.jpg);
 	}
 
-	#slide2 .fp-tableCell, #slide3 .fp-tableCell, #slide4 .fp-tableCell{
-		vertical-align: bottom;
+	.fp-tableCell{
+		vertical-align: top;
 	}
 
-	#slide2 .intro, #slide3 .intro, #slide4 .intro{		
+	.intro{		
 		padding:30px;
-		/*text-shadow: 4px 4px 10px rgba(0,0,0,1);*/
 		background-color: rgba(0,0,0,.5);
 	}
 
-	#slide3{
+	#bgslide3{
 		background-image: url(../images/3_smaller.jpg);
-		background-position: 75% 50%;
 	}
 
-	#slide4{
+	#bgslide4{
 		background-image: url(../images/4_smaller.jpg);
 	}
 
 	@media (min-width: 600px){
 		
-		h1{
-			font-size:  3em;
-		}
+		
 		h2{
-			font-size: 1.8em
+			font-size: 1.5em
 		}
 
 

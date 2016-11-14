@@ -27,23 +27,23 @@
 
 		<script type="text/javascript">
 
-var selectedlang = "ko";
+			var defaultlang = "ko";
 
 			var translations = {
 				trans_threeyears: {
-					de: "", 
+					de: "Vor drei Jahren traf ein Schweizer 8'700km von seiner Heimat entfernt eine Koreanerin.", 
 					ko: "3년 전 한 스위스 사람이 그로부터 8,770km 떨어진 대한민국에서 한 사람을 만났습니다."
 				},				
 				trans_we_are_getting_married: {
-					de: "", 
+					de: "Ihre Erscheinung, die Sprache und auch ihr Essen unterschieden sich stark voneinander. Doch schon bald waren diese Kleinigkeiten überwunden und nun wird aus den Beiden ein Brautpaar.", 
 					ko: "생김새도 언어도 음식도 달랐지만 문화 차이쯤 가볍게 극복한 두 사람이 2016년 11월 26일-27일에 부부의 연을 맺게 되었습니다."
 				},
 				trans_onenight_twodays : {
-					de: "", 
+					de: "Statt einer traditionellen Hochzeit, feiern wir im kleinen Kreis auf dem Land in Korea. Wir freuen uns riesig, dass beide Familien und ein paar engste Freunde mit dabei sein k&ouml;nnen.", 
 					ko: "평범한 결혼식 대신 스위스에서 오는 신랑 가족들과 친구들, 신부 가족들과 친구들을 모시고 고창에서 1박 2일간 작지만 의미있는 시간을 보내려고 합니다. "
 				},				
 				trans_wishusluck: {
-					de: "", 
+					de: "Am 26. November ist es endlich soweit und wir geben uns das Ja-Wort. Wir hoffen, dass du in Gedanken ein Bisschen mitfeierst und uns alles Gute wünschst. Bis bald!<br><br>Eun &amp; Florian",
 					ko: "직접 모시고 인사드리지 못해 죄송합니다. 하지만 축하해 주신다면 그 기운 받아서 잘 살겠습니다. 그러니 마음 가득 축하해 주세요. 감사합니다. <br><br> 최은경 &amp; Florian Wermelinger 드림" 
 				}
 			};
@@ -65,10 +65,13 @@ var selectedlang = "ko";
 					});
 				}
 
-				translate(selectedlang);
+				var lang = getUrlParameter('lang');
+				if(typeof lang === 'undefined'){
+					lang = defaultlang;
+				}
+				translate(lang);
 
-				$('#fullpage').fullpage({
-					//anchors: ['firstPage', 'secondPage', '3rdPage'],
+				$('#fullpage').fullpage({					
 					sectionsColor: ['#f7f7f5'],
 					slidesNavigation: true,
 					loopHorizontal: false,
@@ -77,9 +80,22 @@ var selectedlang = "ko";
 					onSlideLeave: function(){
 						$('.intro').hide();
 					}
-
 				});
 
+				function getUrlParameter(sParam) {
+				    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				        sURLVariables = sPageURL.split('&'),
+				        sParameterName,
+				        i;
+
+				    for (i = 0; i < sURLVariables.length; i++) {
+				        sParameterName = sURLVariables[i].split('=');
+
+				        if (sParameterName[0] === sParam) {
+				            return sParameterName[1] === undefined ? true : sParameterName[1];
+				        }
+				    }
+				};
 
 			});
 			
